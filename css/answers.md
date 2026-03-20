@@ -1,0 +1,8 @@
+- Why are we using clamp instead of media queries?
+    - Clamp allows fluid typography without media queries, it is more convinient to use clamp.
+- Why did we use minmax instead of fixed columns?  
+    - To ensure that the content fits in the screen and it fills screen effectively, creates as many columns as possible.
+- Why is it important to implement a mobile-first? website?
+    - use of minimum width.
+- What happens if we remove the variables that were - defined at the beginning?
+    - var() falls back to a default value.

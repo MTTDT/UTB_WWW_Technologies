@@ -79,3 +79,75 @@ h2 {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+.features {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.card {
+  padding: var(--space-lg);
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 6rem 0;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-dark: #f9fafb;
+    --color-light: #1f2937;
+  }
+
+  body {
+    background: #111827;
+    color: var(--color-dark);
+  }
+
+  .navbar {
+    background: #1f2937;
+  }
+
+  .card {
+    background: #1f2937;
+  }
+}
+
+.hero {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
